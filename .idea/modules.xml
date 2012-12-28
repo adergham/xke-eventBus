@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/xke-eventBus.iml" filepath="$PROJECT_DIR$/xke-eventBus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xke-eventBus-grailsPlugins.iml" filepath="$PROJECT_DIR$/xke-eventBus-grailsPlugins.iml" />
     </modules>
   </component>
 </project>

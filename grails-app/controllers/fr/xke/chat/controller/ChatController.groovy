@@ -6,4 +6,12 @@ class ChatController {
 
         render(view: "myChat")
     }
+
+
+    def addMessage() {
+        def message  = params.message
+        def author = params.author
+
+        render("$author : '$message'")
+    }
 }

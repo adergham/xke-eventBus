@@ -16,4 +16,13 @@ class ChatControllerTests {
        controller.index()
        assert view == "/chat/myChat"
     }
+
+
+    void testAddMessage(){
+        controller.params.message="helloworld"
+        controller.params.author="Edouard Bracame"
+        controller.addMessage()
+
+        assert response.text ==   "Edouard Bracame : 'helloworld'"
+    }
 }

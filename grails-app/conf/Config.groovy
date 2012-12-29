@@ -89,3 +89,9 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+// chat configuration
+chat.username="Moi"
+chat.target.host="localhost"
+chat.target.port="8080"

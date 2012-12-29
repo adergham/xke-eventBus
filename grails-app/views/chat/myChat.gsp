@@ -15,12 +15,15 @@
 </head>
 <body>
 <div class="myChat">
-    <div class="messageLog"></div>
+    <div>
+        <div class="messageLog"></div>
+        <div class="users"></div>
+    </div>
     <div>
         <span>
             <input type="text" class="inputText"/>
         </span>
-        <span>
+        <span class="sendButton">
             <input type="button" id="enter" value="entrer">
         </span>
     </div>

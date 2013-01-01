@@ -10,5 +10,6 @@ class Contact {
     static constraints = {
         ip unique: "port"
         name display: false
+        isValid display:false
     }
 }

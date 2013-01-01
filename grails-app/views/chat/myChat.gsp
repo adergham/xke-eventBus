@@ -17,7 +17,11 @@
 <div class="myChat">
     <div>
         <div class="messageLog"></div>
-        <div class="users"></div>
+        <div class="users">
+            <g:each in="${contacts}">
+                <div>${it.name}</div>
+            </g:each>
+        </div>
     </div>
     <div>
         <span>

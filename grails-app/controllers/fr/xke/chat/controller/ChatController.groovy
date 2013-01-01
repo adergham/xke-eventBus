@@ -1,10 +1,12 @@
 package fr.xke.chat.controller
 
+import fr.xke.chat.domain.Contact
+
 class ChatController {
 
     def index() {
-
-        render(view: "myChat")
+        def contacts = Contact.list()
+        render(view: "myChat", model:[contacts:contacts])
     }
 
 

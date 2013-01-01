@@ -14,17 +14,24 @@ class ContactService {
         if (!contact.isValid){
             // we ask the new contact for validation
             def query = [:]
-            query["myIp"] = grailsApplication.config.chat.my.ip
-            query["myPort"] = grailsApplication.config.chat.my.port
-            query["myName"] = grailsApplication.config.chat.username
-            query["targetIp"] = contact.ip
-            query["targetPort"] = contact.port
+            query["ip"] = grailsApplication.config.chat.my.ip
+            query["port"] = grailsApplication.config.chat.my.port
+            query["name"] = grailsApplication.config.chat.username
+            def targetIp = contact.ip
+            def targetPort = contact.port
 
-            def uri = "http://${query["targetIp"]}:${query["targetPort"]}"
+            def uri = "http://${targetIp}:${targetPort}"
             def path = grailsApplication.config.chat.contact.notify.path
             withHttp(uri: uri){
-                post(path:path, query:query)
+                def response  = post(path:path, query:query)
+                contact.name = response["contactName"]
+                contact.isValid = true
             }
         }
+    }
+
+    def addContact(ip, port, name){
+        def contact  = new Contact(ip: ip, port: port, name : name, isValid: true)
+        contact.save()
     }
 }

@@ -10,6 +10,7 @@
           <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/events-push-1.0.M3/grails-app/views" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/rest-0.7/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -58,6 +59,9 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/resources-1.1.6/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/resources-1.1.6/grails-app/taglib" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/rest-0.7">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/rest-0.7/src/groovy" isTestSource="false" />
+    </content>
     <content url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/tomcat-2.1.0" />
     <content url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/webxml-1.4.1">
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
@@ -73,6 +77,15 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.atmosphere/atmosphere-compat-tomcat7/bundles/atmosphere-compat-tomcat7-1.0.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.atmosphere/atmosphere-compat-tomcat/bundles/atmosphere-compat-tomcat-1.0.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.atmosphere/atmosphere-compat-jbossweb/bundles/atmosphere-compat-jbossweb-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/xml-resolver/xml-resolver/jars/xml-resolver-1.2.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/xerces/xercesImpl/jars/xercesImpl-2.8.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/net.sourceforge.nekohtml/nekohtml/jars/nekohtml-1.9.9.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/net.sf.ezmorph/ezmorph/jars/ezmorph-1.0.6.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/net.sf.json-lib/json-lib/jars/json-lib-2.3-jdk15.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.3.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

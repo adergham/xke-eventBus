@@ -93,5 +93,5 @@ log4j = {
 
 // chat configuration
 chat.username="Moi"
-chat.target.host="localhost"
-chat.target.port="8080"
+chat.my.ip="127.0.0.1"
+chat.my.port="8080"

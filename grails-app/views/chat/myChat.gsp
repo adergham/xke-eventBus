@@ -9,14 +9,30 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <title>mon chat</title>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'chat.css')}" type="text/css">
+    <r:require module="grailsEvents"/>
+    <r:script>
+        window.grailsEvents = new grails.Events('${createLink(uri: '')}', {transport:'sse'});
 
+        //grailsEvents.on("afterInsert", function(data){
+        //        console.log("goal")
+        //});
+
+
+        grailsEvents.on("displayMessage", function(data){
+            $('<div><span class="author">'+data.author+'</span> : <span class="message">' + data.text + '</span></div>').appendTo("#messageLog")
+        }); //will listen for server events on 'savedTodo' topic
+    </r:script>
+    <r:layoutResources />
 </head>
 <body>
 <div class="myChat">
     <div>
-        <div class="messageLog"></div>
+        <div id="messageLog" class="messageLog"></div>
         <div class="users">
             <g:each in="${contacts}">
                 <div>${it.name}</div>
@@ -33,6 +49,6 @@
     </div>
 
 </div>
-
+<r:layoutResources />
 </body>
 </html>

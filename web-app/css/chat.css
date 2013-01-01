@@ -15,6 +15,7 @@
     width: 80%;
     padding: 0.3em;
     float: left;
+    overflow: auto;
 }
 
 .users{
@@ -26,6 +27,7 @@
     width: 15%;
     padding: 0.3em;
     float: right;
+    overflow: auto;
 }
 
 .inputText{
@@ -38,4 +40,8 @@
 
 .sendButton{
     float: right;
+}
+
+.author{
+    font-weight: bold;
 }

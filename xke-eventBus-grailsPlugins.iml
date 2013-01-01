@@ -6,6 +6,10 @@
         <webroots>
           <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/jquery-1.7.2/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/database-migration-1.1/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/events-push-1.0.M3/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/events-push-1.0.M3/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -28,6 +32,10 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/database-migration-1.1/src/groovy" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/database-migration-1.1/grails-app/controllers" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/events-push-1.0.M3">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/events-push-1.0.M3/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/events-push-1.0.M3/grails-app/i18n" isTestSource="false" />
+    </content>
     <content url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/hibernate-2.1.0">
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/hibernate-2.1.0/grails-app/i18n" isTestSource="false" />
     </content>
@@ -36,6 +44,13 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/jquery-1.7.2/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/jquery-1.7.2/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/jquery-1.7.2/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/grails-app/controllers" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/platform-core-1.0.M6/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/resources-1.1.6">
       <sourceFolder url="file://$USER_HOME$/.grails/2.1.0/projects/xke-eventBus/plugins/resources-1.1.6/src/java" isTestSource="false" />
@@ -54,6 +69,10 @@
       <library name="Grails User Library (xke-eventBus-grailsPlugins)">
         <CLASSES>
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.liquibase/liquibase-core/jars/liquibase-core-2.0.5.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.atmosphere/atmosphere-runtime/bundles/atmosphere-runtime-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.atmosphere/atmosphere-compat-tomcat7/bundles/atmosphere-compat-tomcat7-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.atmosphere/atmosphere-compat-tomcat/bundles/atmosphere-compat-tomcat-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.atmosphere/atmosphere-compat-jbossweb/bundles/atmosphere-compat-jbossweb-1.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

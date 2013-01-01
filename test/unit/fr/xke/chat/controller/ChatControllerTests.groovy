@@ -1,6 +1,7 @@
 package fr.xke.chat.controller
 
 import fr.xke.chat.domain.Contact
+import fr.xke.chat.service.ChatService
 import grails.test.mixin.*
 import org.junit.*
 
@@ -20,10 +21,16 @@ class ChatControllerTests {
 
 
     void testAddMessage(){
+        def mockService = mockFor(ChatService)
+        mockService.demand.logMessage(1..1){ String author, String message ->}
+        controller.chatService=mockService.createMock()
+
         controller.params.message="helloworld"
         controller.params.author="Edouard Bracame"
         controller.addMessage()
 
-        assert response.text ==   "Edouard Bracame : 'helloworld'"
+        mockService.verify()
+
+
     }
 }

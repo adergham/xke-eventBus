@@ -4,6 +4,8 @@ import fr.xke.chat.domain.Contact
 
 class ChatController {
 
+    def chatService
+
     def index() {
         def contacts = Contact.list()
         render(view: "myChat", model:[contacts:contacts])
@@ -14,6 +16,7 @@ class ChatController {
         def message  = params.message
         def author = params.author
 
-        render("$author : '$message'")
+        chatService.logMessage(author, message)
+        render("coucou")
     }
 }

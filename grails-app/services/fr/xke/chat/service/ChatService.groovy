@@ -8,5 +8,9 @@ class ChatService {
 
         def message = new Message(message: text, authorName: author)
         message.save()
+
+        // we broadcast the event to the UI
+        def messageLine = [author: author, text:text]
+        event("displayMessage", messageLine)
     }
 }

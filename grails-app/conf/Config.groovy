@@ -59,9 +59,19 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+
+// chat configuration
+chat.username="Moi"
+chat.my.ip="127.0.0.1"
+chat.my.port="8080"
+chat.contact.notify.path="/xke-eventBus/contact/notifyContact"
+
 environments {
     development {
         grails.logging.jul.usebridge = true
+    }
+    test {
+        chat.username="Jean-Raoul Ducable"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -91,8 +101,3 @@ log4j = {
 }
 
 
-// chat configuration
-chat.username="Moi"
-chat.my.ip="127.0.0.1"
-chat.my.port="8080"
-chat.contact.notify.path="/xke-eventBus/contact/notifyContact"

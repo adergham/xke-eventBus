@@ -1,6 +1,7 @@
 package fr.xke.chat.service
 
 import fr.xke.chat.domain.Message
+import grails.events.Listener
 
 class ChatService {
 
@@ -12,5 +13,14 @@ class ChatService {
         // we broadcast the event to the UI
         def messageLine = [author: author, text:text]
         event("displayMessage", messageLine)
+    }
+
+    @Listener(namespace='browser', topic="messageInput")
+    def broadcastMessage(inputMessage){
+        // we retrieve the list of contacts
+
+        // parallelify the list before broadcasting
+
+        // broadcast the message
     }
 }

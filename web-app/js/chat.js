@@ -1,5 +1,5 @@
-//window.grailsEvents = new grails.Events('${createLink(uri: '')}', {transport:'sse'});
-window.grailsEvents = new grails.Events('/xke-eventBus', {transport:'sse'});
+var uri = $("#uri").text()
+window.grailsEvents = new grails.Events(uri, {transport:'sse'});
 
 
 grailsEvents.on("displayMessage", function(data){

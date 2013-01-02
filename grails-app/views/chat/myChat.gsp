@@ -33,11 +33,11 @@
             <span>
                 <input id="inputField" type="text" class="inputText"/>
             </span>
-
         </form>
     </div>
 
 </div>
+<div id="uri" style="visibility:hidden">${createLink(uri: '')}</div>
 <r:layoutResources />
 <g:javascript src="chat.js" />
 </body>

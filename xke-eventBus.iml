@@ -60,6 +60,9 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.3.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.gpars/gpars/jars/gpars-0.12.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.jsr166-mirror/extra166y/jars/extra166y-1.7.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.jsr166-mirror/jsr166y/jars/jsr166y-1.7.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

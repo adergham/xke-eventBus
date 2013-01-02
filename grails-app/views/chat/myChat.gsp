@@ -15,18 +15,7 @@
     <title>mon chat</title>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'chat.css')}" type="text/css">
     <r:require module="grailsEvents"/>
-    <r:script>
-        window.grailsEvents = new grails.Events('${createLink(uri: '')}', {transport:'sse'});
 
-        //grailsEvents.on("afterInsert", function(data){
-        //        console.log("goal")
-        //});
-
-
-        grailsEvents.on("displayMessage", function(data){
-            $('<div><span class="author">'+data.author+'</span> : <span class="message">' + data.text + '</span></div>').appendTo("#messageLog")
-        }); //will listen for server events on 'savedTodo' topic
-    </r:script>
     <r:layoutResources />
 </head>
 <body>
@@ -40,15 +29,16 @@
         </div>
     </div>
     <div>
-        <span>
-            <input type="text" class="inputText"/>
-        </span>
-        <span class="sendButton">
-            <input type="button" id="enter" value="entrer">
-        </span>
+        <form id="chatInput">
+            <span>
+                <input id="inputField" type="text" class="inputText"/>
+            </span>
+
+        </form>
     </div>
 
 </div>
 <r:layoutResources />
+<g:javascript src="chat.js" />
 </body>
 </html>

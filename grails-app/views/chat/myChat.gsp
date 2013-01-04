@@ -22,9 +22,9 @@
 <div class="myChat">
     <div>
         <div id="messageLog" class="messageLog"></div>
-        <div class="users">
+        <div id="users" class="users">
             <g:each in="${contacts}">
-                <div>${it.name}</div>
+                <div id="${it.ip}-${it.port}">${it.name}</div>
             </g:each>
         </div>
     </div>

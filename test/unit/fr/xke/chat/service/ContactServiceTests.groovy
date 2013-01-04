@@ -29,17 +29,5 @@ class ContactServiceTests {
         assert hasCalledWS == true
     }
 
-    void testAfterInsertValidContact(){
-        def contact  = new Contact(ip: "127.0.0.1", port: "8080", name : "joe", isValid: true)
 
-        def hasCalledWS = false
-        service.metaClass.withHttp = {Map args, Closure closure ->
-            hasCalledWS=true
-            Exception.metaClass.toString = {->""}
-            return}
-
-        service.afterInsert(contact)
-
-        assert hasCalledWS == false
-    }
 }

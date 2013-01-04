@@ -4,13 +4,7 @@ import fr.xke.chat.domain.Contact
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 
-/**
- * Created with IntelliJ IDEA.
- * User: adergham
- * Date: 03/01/13
- * Time: 15:47
- * To change this template use File | Settings | File Templates.
- */
+
 @TestFor(ContactService)
 @Mock(Contact)
 class ContactServiceTests {

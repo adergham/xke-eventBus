@@ -18,4 +18,26 @@ class ChatControllerTests {
        assert view == "/chat/myChat"
        assert controller.modelAndView.model == [contacts: []]
     }
+
+    void testReceiveMessageAndFireEvent(){
+        def mockService = mockFor(ChatService)
+        mockService.demand.logMessage(0..0){ /*this method should be called*/ }
+
+        controller.chatService = mockService.createMock()
+
+        def hasFiredEvent = false
+        controller.metaClass.event = {String topic, Map data ->
+            hasFiredEvent=true
+            return}
+
+        controller.params.message = "lololol..."
+        controller.params.author = "Mr Trollolo"
+        controller.receiveMessage()
+        sleep(500l)
+
+        mockService.verify()
+
+        assert hasFiredEvent == true
+
+    }
 }

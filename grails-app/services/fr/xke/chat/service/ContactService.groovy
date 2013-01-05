@@ -9,13 +9,8 @@ class ContactService {
     def grailsApplication
 
 
-    @Listener(namespace = "gorm")
     def afterInsert(Contact contact) {
-        if (contact.isValid){
-            refreshContactList(contact)
-        } else {
-            requestContactValidation(contact)
-        }
+        // TODO Implement me
     }
 
     @Listener(namespace = "gorm")

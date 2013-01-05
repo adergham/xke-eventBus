@@ -24,15 +24,16 @@ class ChatService {
         def text = msg.text
         def authorName = grailsApplication.config.chat.username
 
-        broadcastMessage(authorName, text)
 
         def messageLine = [author: authorName, text:text]
+        event("broadcast", messageLine)
         event("display.message", messageLine)
     }
 
 
-    def broadcastMessage(authorName, inputMessage){
-        log.info("broadcast message : ${inputMessage}")
+    @Listener(namespace='*', topic="broadcast")
+    def broadcastMessage(messageLine){
+        log.info("broadcast message : ${messageLine}")
         // we retrieve the list of contacts
         def contacts = Contact.list()
 
@@ -41,7 +42,7 @@ class ChatService {
 
         // broadcast the message
         def path = grailsApplication.config.chat.message.addMessage.path
-        def query = [author: authorName, message: inputMessage]
+        def query = [author: messageLine.author, message: messageLine.text]
 
         contacts.eachParallel {
             def uri = "http://${it.ip}:${it.port}"

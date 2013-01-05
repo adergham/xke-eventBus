@@ -27,7 +27,7 @@ $("#chatInput").submit(function(e){
     message["text"]= input
 
     // we send the input to the event bus :
-    grailsEvents.send('message.input', message)
+    //TODO let me publish an event
     $("#inputField").val("")
 })
 

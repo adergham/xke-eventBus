@@ -17,7 +17,6 @@ class ChatController {
         def author = params.author
 
         log.info("message received")
-        def messageLine = [author: author, text:message]
-        event("message.received", messageLine)
+        //TODO finish me
     }
 }

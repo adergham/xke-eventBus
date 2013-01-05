@@ -9,7 +9,6 @@ class ChatService {
 
     def grailsApplication
 
-    @Listener(namespace='*', topic="message.*")
     def logMessage(msg) {
         def text = msg.text
         def author = msg.author? msg.author : grailsApplication.config.chat.username

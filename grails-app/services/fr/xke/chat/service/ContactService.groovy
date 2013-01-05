@@ -43,7 +43,7 @@ class ContactService {
                 contact.isValid = true
             }
         } catch (e){
-            println("timeout!!!")
+            log.warn("Contact validation timeout!!!")
         }
     }
 

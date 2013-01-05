@@ -12,7 +12,7 @@ class ChatController {
     }
 
 
-    def addMessage() {
+    def receiveMessage() {
         def message  = params.message
         def author = params.author
 

@@ -65,7 +65,7 @@ chat.username="Moi"
 chat.my.ip="127.0.0.1"
 chat.my.port="8080"
 chat.contact.notify.path="/xke-eventBus/contact/notifyContact"
-chat.message.addMessage.path="/xke-eventBus/chat/addMessage"
+chat.message.addMessage.path="/xke-eventBus/chat/receiveMessage"
 
 environments {
     development {

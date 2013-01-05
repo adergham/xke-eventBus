@@ -26,12 +26,11 @@ class ChatService {
 
 
         def messageLine = [author: authorName, text:text]
-        event("broadcast", messageLine)
         event("display.message", messageLine)
     }
 
 
-    @Listener(namespace='*', topic="broadcast")
+    @Listener(namespace='*', topic="display.message")
     def broadcastMessage(messageLine){
         log.info("broadcast message : ${messageLine}")
         // we retrieve the list of contacts

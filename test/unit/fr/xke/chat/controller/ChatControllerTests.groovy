@@ -18,19 +18,4 @@ class ChatControllerTests {
        assert view == "/chat/myChat"
        assert controller.modelAndView.model == [contacts: []]
     }
-
-
-    void testAddMessage(){
-        def mockService = mockFor(ChatService)
-        mockService.demand.logMessage(1..1){ String author, String message ->}
-        controller.chatService=mockService.createMock()
-
-        controller.params.message="helloworld"
-        controller.params.author="Edouard Bracame"
-        controller.addMessage()
-
-        mockService.verify()
-
-
-    }
 }

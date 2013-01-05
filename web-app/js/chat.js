@@ -2,11 +2,14 @@ var uri = $("#uri").text()
 window.grailsEvents = new grails.Events(uri, {transport:'sse'});
 
 
-grailsEvents.on("displayMessage", function(data){
+
+
+displayNewLine = function(data){
     $('<div><span class="author">'+data.author+'</span> : <span class="message">' + data.text + '</span></div>').appendTo("#messageLog")
-});
+}
 
-
+grailsEvents.on("display.message", displayNewLine);
+grailsEvents.on("message.received", displayNewLine);
 
 grailsEvents.on("addContactToList", function(data){
     $('<div id="'+data.ip+'-'+data.port+'">'+data.name+'</div>').appendTo("#users")
@@ -20,9 +23,11 @@ grailsEvents.on("removeContactFromList", function(data){
 $("#chatInput").submit(function(e){
     e.preventDefault()
     var input  =  $("#inputField").val()
+    var message = {}
+    message["text"]= input
 
     // we send the input to the event bus :
-    grailsEvents.send('messageInput', input)
+    grailsEvents.send('message.input', message)
     $("#inputField").val("")
 })
 

@@ -9,18 +9,30 @@ class ChatService {
 
     def grailsApplication
 
-    def logMessage(author, text) {
+    @Listener(namespace='*', topic="message.*")
+    def logMessage(msg) {
+        def text = msg.text
+        def author = msg.author? msg.author : grailsApplication.config.chat.username
 
+        log.info("log message to database : '${author}: ${text}'" )
         def message = new Message(message: text, authorName: author)
         message.save()
-
-        // we broadcast the event to the UI
-        def messageLine = [author: author, text:text]
-        event("displayMessage", messageLine)
     }
 
-    @Listener(namespace='browser', topic="messageInput")
-    def broadcastMessage(inputMessage){
+    @Listener(namespace='browser', topic="message.input")
+    def inputMessage(msg) {
+        def text = msg.text
+        def authorName = grailsApplication.config.chat.username
+
+        broadcastMessage(authorName, text)
+
+        def messageLine = [author: authorName, text:text]
+        event("display.message", messageLine)
+    }
+
+
+    def broadcastMessage(authorName, inputMessage){
+        log.info("broadcast message : ${inputMessage}")
         // we retrieve the list of contacts
         def contacts = Contact.list()
 
@@ -28,7 +40,6 @@ class ChatService {
         ParallelEnhancer.enhanceInstance(contacts)
 
         // broadcast the message
-        def authorName = grailsApplication.config.chat.username
         def path = grailsApplication.config.chat.message.addMessage.path
         def query = [author: authorName, message: inputMessage]
 
@@ -39,9 +50,6 @@ class ChatService {
                 post(path:path, query:query)
             }
         }
-
-        // add the message into log
-        logMessage(authorName, inputMessage)
     }
 
 }

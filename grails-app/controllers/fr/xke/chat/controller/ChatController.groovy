@@ -16,7 +16,8 @@ class ChatController {
         def message  = params.message
         def author = params.author
 
-        chatService.logMessage(author, message)
-        render("coucou")
+        log.info("message received")
+        def messageLine = [author: author, text:message]
+        event("message.received", messageLine)
     }
 }

@@ -36,10 +36,14 @@ class ContactService {
 
         def uri = "http://${targetIp}:${targetPort}"
         def path = grailsApplication.config.chat.contact.notify.path
-        withHttp(uri: uri){
-            def response  = post(path:path, query:query)
-            contact.name = response["contactName"]
-            contact.isValid = true
+        try{
+            withHttp(uri: uri){
+                def response  = post(path:path, query:query)
+                contact.name = response["contactName"]
+                contact.isValid = true
+            }
+        } catch (e){
+            println("timeout!!!")
         }
     }
 

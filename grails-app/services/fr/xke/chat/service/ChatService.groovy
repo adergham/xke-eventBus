@@ -18,18 +18,15 @@ class ChatService {
         message.save()
     }
 
-    @Listener(namespace='browser', topic="message.input")
     def inputMessage(msg) {
         def text = msg.text
         def authorName = grailsApplication.config.chat.username
 
 
-        def messageLine = [author: authorName, text:text]
-        event("display.message", messageLine)
+        //TODO finish me
     }
 
 
-    @Listener(namespace='*', topic="display.message")
     def broadcastMessage(messageLine){
         log.info("broadcast message : ${messageLine}")
         // we retrieve the list of contacts

@@ -13,6 +13,10 @@ class ContactService {
         // TODO Implement me
     }
 
+    def refreshContactList(Contact contact){
+        //TODO Implement me
+    }
+
     @Listener(namespace = "gorm")
     def afterDelete(Contact contact) {
         // we send an event to the UI to refresh the contact list
@@ -42,11 +46,7 @@ class ContactService {
         }
     }
 
-    def refreshContactList(Contact contact){
-        // we send an event to the UI to refresh the contact list
-        def newContact = [ip: contact.ip, port: contact.port, name : contact.name]
-        event("addContactToList", newContact)
-    }
+
 
     def addContact(ip, port, name){
         def contact  = new Contact(ip: ip, port: port, name : name, isValid: true)

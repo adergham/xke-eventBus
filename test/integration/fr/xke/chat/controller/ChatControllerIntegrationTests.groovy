@@ -14,10 +14,8 @@ class ChatControllerIntegrationTests  extends GroovyTestCase {
 
         sleep(1000l)
 
-        def messages  = Message.list()
-        assert messages.size() == 1
-        assert messages[0].authorName == "Agathe Zeblouse"
-        assert messages[0].message == "helloworld!"
+        def expectedMsg  = Message.findByAuthorName("Agathe Zeblouse")
+        assert expectedMsg.message == "helloworld!"
 
     }
 }

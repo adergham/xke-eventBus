@@ -102,9 +102,9 @@ ContactController.notifyContact() reçoit les requêtes de validation des autres
 
 
 
-## 8) Faire en sorte qu’écrire et recevoir un message déclenche un enregistrement en base ##
+## 8. Faire en sorte qu’écrire et recevoir un message déclenche un enregistrement en base ##
 
-#### Instruction: ####
+#### Instructions: ####
  * Remplacer l’appel de chatService.logMessage dans chatController.receiveMessage par la publication d’un evenement “message.received”
  * Déclarer un Listener sur logMessage en utilisant une wildcard dans le nom du topic.
 

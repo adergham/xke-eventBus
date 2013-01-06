@@ -11,7 +11,7 @@ Mettez à jour les propriétés suivantes dans conf/Config.groovy:
 ## Objectif : ##
 
 Au cours de ce Hand's on, nous allons completer une application de chat pour la faire fonctionner.
-Si vous êtes bloqué, vous pouvez effectuer un checkout de la branche "**solution**".
+Si vous êtes bloqué, vous pouvez effectuer un checkout de la branche "solution".
 
 
 ## 1. Valider un contacte nouvellement enregistré ##

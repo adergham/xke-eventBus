@@ -6,6 +6,8 @@ Mettez à jour les propriétés suivantes dans conf/Config.groovy:
  * chat.username : votre pseudo 
  * chat.my.ip : l'adresse ip de votre machine
  * chat.my.port : le port sur lequel votre application va fonctionner (par défaut 8080)
+ 
+La documentation du plugin Platform-core se trouve [ici](http://grailsrocks.github.com/grails-platform-core/guide/events.html).
 
 
 ## Objectif : ##

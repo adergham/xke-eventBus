@@ -18,7 +18,7 @@ Si vous êtes bloqué, vous pouvez effectuer un checkout de la branche "solution
 
 ## 1. Valider un contacte nouvellement enregistré ##
 
-A travers l’interface Scaffoldée de Grails, il est possible d’enregistrer un nouveau contacte dans votre liste de diffusion. 
+A travers l’interface Scaffoldée de Grails, il est possible d’enregistrer un nouveau contact dans votre liste de diffusion. 
 Cependant, l’adresse ip du contacte doit être validée.
 Cette validation est assurée par la méthode ContactService.requestContactValidation() qu’il faut pouvoir appeler à l’enregistrement d’un nouveau contacte.
 

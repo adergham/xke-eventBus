@@ -3,3 +3,6 @@ target
 xke-eventBus-grailsPlugins.iml
 xke-eventBus.iml
 .idea
+.project
+.classpath
+.settings
